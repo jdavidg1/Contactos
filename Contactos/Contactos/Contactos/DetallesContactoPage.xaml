@@ -20,7 +20,7 @@
         
         <StackLayout Grid.Row="1"
                      Grid.ColumnSpan="2">
-            
+                        
             <Label x:Name="correoLabel" 
                    Text="correo@ejemplo.com"/>
             <Label x:Name="telefonoLabel" 
@@ -28,6 +28,5 @@
         </StackLayout>
 
     </Grid>
-    
-    
+        
 </ContentPage>
