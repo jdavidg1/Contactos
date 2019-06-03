@@ -14,6 +14,20 @@ namespace Contactos
             MainPage = new MainPage();
         }
 
+        public static string RUTA_DB;
+
+        public App(string ruta_db)
+
+        {
+
+            InitializeComponent();
+
+            MainPage = new MainPage();
+
+            RUTA_DB = ruta_db;
+
+        }
+
         protected override void OnStart()
         {
             // Handle when your app starts

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Foundation;
@@ -23,8 +24,14 @@ namespace Contactos.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+           
 
+            string nombre_Archivo = "bd_Contactos.sqlite";
+            string rutaCarpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),"..","Library", "Databases");
+            string rutaCompleta = Path.Combine(rutaCarpeta, nombre_Archivo);
+
+
+            LoadApplication(new App(rutaCompleta));
             return base.FinishedLaunching(app, options);
         }
     }
